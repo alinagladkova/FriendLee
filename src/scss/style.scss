@@ -128,6 +128,7 @@ body._lock {
 			color: #333333;
 		}
 		&__button {
+			cursor: pointer;
 			font-weight: 900;
 			font-size: 30px;
 			line-height: 36px;
@@ -143,5 +144,116 @@ body._lock {
 }
 .calculator__item:last-child {
 	margin-right: 0;
+}
+.calculator__button:hover {
+	background: #111111;
+}
+.calculator__button:active {
+	background: #575757;
+}
+//Адаптив
+@media (max-width: 1120px) {
+	.mainscreen {
+		padding-top: 64px;
+		padding-bottom: 156px;
+			&__title {
+				margin-bottom: 44px;
+			}
+			&__calculator {
+				display: flex;
+			}
+	}
+	.calculator {
+			&__first-row {
+				flex-direction: column;
+				justify-content: space-between;
+				margin-bottom: 44px;
+			}
+			&__item {
+				flex-basis: 50%;
+				margin-right: 0;
+			}
+			&__what {
+				font-weight: 900;
+				font-size: 30px;
+				line-height: 36px;
+				text-align: right;
+				color: #575757;
+			}
+			&__second-row {
+				flex-wrap: wrap;
+			}
+			&__price {
+				margin-bottom: 44px;
+			}
+			&__button {
+				width: 345px;
+			}
+	}
+}
+@media (max-width: 768px) {
+	.mainscreen {
+		background-color: #fff;
+		padding-top: 44px;
+		padding-bottom: 64px;
+			&__container {
+			}
+			&__title {
+				font-size: 34px;
+				max-width: 500px;
+			}
+	}
+	.calculator {
+			&__first-row {
+				margin-bottom: 0px;
+			}
+			&__item {
+				flex-basis: 100%;
+				
+			}
+			&__label {
+				font-size: 14px;
+				line-height: 136%;
+				color: #333E48;
+				margin-bottom: 8px;
+			}
+			&__label-low {
+				font-size: 14px;
+				line-height: 136%;
+				color: #333333;
+				margin-bottom: 2px;
+			}
+			&__block {
+				padding: 20px 20px;
+				margin-bottom: 25px;
+			}
+			&__numbers {
+				font-size: 22px;
+				line-height: 20px;
+				color: #333E48;
+			}
+			&__what {
+				font-size: 22px;
+				line-height: 20px;
+				color: #333E48;
+			}
+			&__second-row {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}//
+			&__price {
+				font-size: 22px;
+				line-height: 20px;
+				color: #333333;
+				margin-bottom: 29px;
+			}
+			&__button {
+				font-size: 22px;
+				line-height: 20px;
+				width: 100%;
+				height: 60px;
+			}
+	}
 }
 
